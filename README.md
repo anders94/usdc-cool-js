@@ -1,4 +1,4 @@
-# startkit-typescript
+# usdc-cool
 
 ## Getting started
 

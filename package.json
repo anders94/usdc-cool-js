@@ -1,22 +1,49 @@
 {
-  "name": "startkit-typescript",
+  "name": "usdc-cool",
   "version": "1.0.0",
-  "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "description": "usdc.cool - The USDC stablecoin tracker",
+  "main": "dist/lib/index.js",
+  "types": "dist/lib/index.d.ts",
+  "homepage": "https://github.com/m2-labs/usdc-cool-npm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m2-labs/usdc-cool-npm.git"
+  },
+  "author": {
+    "name": "M2 Labs",
+    "url": "https://m2.xyz"
+  },
+  "contributors": [
+    {
+      "name": "Brice Stacey",
+      "email": "brice@m2.xyz"
+    },
+    {
+      "name": "Matt Venables",
+      "email": "matt@m2.xyz"
+    }
+  ],
   "scripts": {
     "build": "tsc",
     "dev": "ts-node lib/index.ts",
     "format": "prettier  --write .",
     "lint": "eslint . --ext .ts",
-    "start": "node dist/index.js"
+    "start": "node dist/index.js",
+    "test": "",
+    "type-check": "tsc --pretty --noEmit"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@solana/web3.js": "^1.31.0",
+    "big.js": "^6.1.1",
+    "cross-fetch": "^3.1.4",
+    "ethers": "^5.5.2",
+    "swr": "^1.1.0"
   },
   "devDependencies": {
+    "@types/big.js": "^6.1.2",
     "@types/node": "^16.11.6",
     "@typescript-eslint/eslint-plugin": "^5.2.0",
     "@typescript-eslint/parser": "^5.2.0",
