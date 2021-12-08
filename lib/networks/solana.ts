@@ -16,8 +16,8 @@ const getSupplyAndPreMintBalance = (
 }
 
 export const fetchSolanaSupply = async (
-  address: string,
-  preMintAddress: string
+  address: string = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+  preMintAddress: string = "3emsAVdmGKERbHjmGfQ6oZ1e35dkf5iYcS6U4CPKFVaa"
 ): Promise<Big> => {
   const [tokenInfo, preMintBalance] = await getSupplyAndPreMintBalance(
     address,

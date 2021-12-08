@@ -1,7 +1,7 @@
 import Big from "big.js"
 import fetch from "cross-fetch"
 
-export const fetchAlgorandSupply = async (assetID: string): Promise<Big> => {
+export const fetchAlgorandSupply = async (assetID: string = "31566704"): Promise<Big> => {
   const data = await fetch(
     `https://indexer.algoexplorerapi.io/v2/assets/${assetID}?include-all=true`
   )

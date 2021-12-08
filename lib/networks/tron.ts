@@ -18,7 +18,7 @@ type TronResponse = {
 }
 
 export const fetchTronSupply = async (
-  contractAddress: string
+  contractAddress: string = "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8"
 ): Promise<Big> => {
   const data = await fetch(
     `https://apilist.tronscan.org/api/token_trc20?contract=${contractAddress}`
