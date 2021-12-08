@@ -15,10 +15,9 @@ const getSupplyAndPreMintBalance = (
   ])
 }
 
-export const fetchSolanaSupply = async (
-  address: string = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
-  preMintAddress: string = "3emsAVdmGKERbHjmGfQ6oZ1e35dkf5iYcS6U4CPKFVaa"
-): Promise<Big> => {
+export const fetchSolanaSupply = async (): Promise<Big> => {
+  const address = "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v"
+  const preMintAddress = "3emsAVdmGKERbHjmGfQ6oZ1e35dkf5iYcS6U4CPKFVaa"
   const [tokenInfo, preMintBalance] = await getSupplyAndPreMintBalance(
     address,
     preMintAddress

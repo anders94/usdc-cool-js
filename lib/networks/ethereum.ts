@@ -3,7 +3,8 @@ import { ethers } from "ethers"
 
 const BLACKLIST_TOTAL = new Big(100_000)
 
-export const fetchEthereumSupply = async (address: string = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"): Promise<Big> => {
+export const fetchEthereumSupply = async (): Promise<Big> => {
+  const address = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
   const provider = new ethers.providers.InfuraProvider(
     "mainnet",
     "e3bb406cb74343c18968f0018010ffc1"

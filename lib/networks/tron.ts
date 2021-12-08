@@ -17,9 +17,8 @@ type TronResponse = {
   trc20_tokens: TRC20Token[]
 }
 
-export const fetchTronSupply = async (
-  contractAddress: string = "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8"
-): Promise<Big> => {
+export const fetchTronSupply = async (): Promise<Big> => {
+  const contractAddress = "TEkxiTehnzSmSe2XqrBj4w32RUN966rdz8"
   const data = await fetch(
     `https://apilist.tronscan.org/api/token_trc20?contract=${contractAddress}`
   )

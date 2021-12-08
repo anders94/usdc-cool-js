@@ -70,10 +70,9 @@ const getPreMintBalance = async (tokenID: string, preMintAccount: string) => {
   }
 }
 
-export const fetchHederaSupply = async (
-  tokenID: string = "0.0.456858",
-  preMintAccount: string = "0.0.439717"
-): Promise<Big> => {
+export const fetchHederaSupply = async (): Promise<Big> => {
+  const tokenID = "0.0.456858"
+  const preMintAccount = "0.0.439717"
   const [tokenInfo, premintSupply] = await Promise.all([
     getTokenInfo(tokenID),
     getPreMintBalance(tokenID, preMintAccount)
