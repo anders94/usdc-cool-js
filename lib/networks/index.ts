@@ -1,4 +1,5 @@
 export * from "./algorand"
+export * from "./avalanche"
 export * from "./ethereum"
 export * from "./hedera"
 export * from "./solana"

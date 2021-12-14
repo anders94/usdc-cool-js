@@ -1,5 +1,6 @@
 import Big from "big.js"
 import { fetchAlgorandSupply } from "./algorand"
+import { fetchAvalancheSupply } from "./avalanche"
 import { fetchEthereumSupply } from "./ethereum"
 import { fetchHederaSupply } from "./hedera"
 import { fetchSolanaSupply } from "./solana"
@@ -9,6 +10,7 @@ import { fetchTronSupply } from "./tron"
 export const fetchTotalSupply = async (): Promise<{
   totalSupply: Big
   algorandSupply: Big
+  avalancheSupply: Big
   ethereumSupply: Big
   hederaSupply: Big
   solanaSupply: Big
@@ -17,6 +19,7 @@ export const fetchTotalSupply = async (): Promise<{
 }> => {
   const [
     algorandSupply,
+    avalancheSupply,
     ethereumSupply,
     hederaSupply,
     solanaSupply,
@@ -24,6 +27,7 @@ export const fetchTotalSupply = async (): Promise<{
     tronSupply
   ] = await Promise.all([
     fetchAlgorandSupply(),
+    fetchAvalancheSupply(),
     fetchEthereumSupply(),
     fetchHederaSupply(),
     fetchSolanaSupply(),
@@ -33,6 +37,7 @@ export const fetchTotalSupply = async (): Promise<{
 
   const totalSupply = [
     algorandSupply,
+    avalancheSupply,
     ethereumSupply,
     hederaSupply,
     solanaSupply,
@@ -45,6 +50,7 @@ export const fetchTotalSupply = async (): Promise<{
   return {
     totalSupply,
     algorandSupply,
+    avalancheSupply,
     ethereumSupply,
     hederaSupply,
     solanaSupply,

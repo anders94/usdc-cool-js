@@ -3,6 +3,7 @@ import { fetchTotalSupply } from "../lib"
 const main = async () => {
   const {
     algorandSupply,
+    avalancheSupply,
     ethereumSupply,
     hederaSupply,
     solanaSupply,
@@ -12,6 +13,7 @@ const main = async () => {
   } = await fetchTotalSupply()
 
   console.log(`Algorand: $${algorandSupply.toString()}`)
+  console.log(`Avalanche: $${avalancheSupply.toString()}`)
   console.log(`Ethereum: $${ethereumSupply.toString()}`)
   console.log(`Hedera: $${hederaSupply.toString()}`)
   console.log(`Solana: $${solanaSupply.toString()}`)
