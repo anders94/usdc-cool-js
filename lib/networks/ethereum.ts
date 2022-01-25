@@ -1,7 +1,12 @@
 import Big from "big.js"
 import { ethers } from "ethers"
 
-const BLACKLIST_TOTAL = new Big(100_000)
+/**
+ * Total USDC Balance of Blacklisted Addresses:
+ *
+ * https://dune.xyz/queries/374985
+ */
+const BLACKLIST_TOTAL = new Big(2_674_725.46361)
 
 export const fetchEthereumSupply = async (): Promise<Big> => {
   const address = "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
