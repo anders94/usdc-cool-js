@@ -1,6 +1,6 @@
 {
   "name": "usdc.cool",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "usdc.cool - The USDC stablecoin tracker",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
