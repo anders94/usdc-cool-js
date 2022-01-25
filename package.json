@@ -1,6 +1,6 @@
 {
   "name": "usdc.cool",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "usdc.cool - The USDC stablecoin tracker",
   "main": "dist/lib/index.js",
   "types": "dist/lib/index.d.ts",
@@ -8,10 +8,10 @@
   "files": [
     "dist"
   ],
-  "homepage": "https://github.com/m2-labs/usdc-cool-npm",
+  "homepage": "https://github.com/m2-labs/usdc-cool-js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/m2-labs/usdc-cool-npm.git"
+    "url": "https://github.com/m2-labs/usdc-cool-js.git"
   },
   "author": {
     "name": "M2 Labs",
@@ -29,10 +29,11 @@
   ],
   "scripts": {
     "build": "tsc --build --clean && tsc",
+    "clean": "rm -rf dist",
     "dev": "ts-node lib/index.ts",
     "format": "prettier  --write .",
     "lint": "eslint . --ext .ts",
-    "prepublish": "npm run build",
+    "prepublish": "npm run clean; npm run build",
     "start": "node dist/index.js",
     "test": "",
     "type-check": "tsc --pretty --noEmit"
